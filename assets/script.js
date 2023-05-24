@@ -18,6 +18,8 @@ function invokeSystem(userOption){
     
     var confetti = document.getElementById("container2");
     confetti.style.display= "none";
+    var gmaeover = document.getElementById("container3");
+    gmaeover.style.display = "none";
     var sys = choosePic();
     console.log(sys+" "+userOption);
     if(userOption=="rock"){        
@@ -32,7 +34,7 @@ function invokeSystem(userOption){
 
 
     if(userOption == sys){
-        user_points++; system_points++;        
+             
         sys_Container.style.background = "grey";
         play_Container.style.background = "grey";
 
@@ -82,9 +84,10 @@ function invokeSystem(userOption){
         document.getElementById("player-option").src = "assets/images/rock-paper-scissors.png";
     }
     if(system_points>=user_points && system_points>5){
+        var gameover = document.getElementById("container3");
+        gameover.style.display = "flex";
         system_points=0;
-        user_points=0;
-        
+        user_points=0;        
         document.getElementById("system-option").src = "assets/images/rock-paper-scissors.png";
         document.getElementById("player-option").src = "assets/images/rock-paper-scissors.png";
     }
