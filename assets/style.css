@@ -3,10 +3,14 @@ body{
     background-color: rgb(177, 217, 252);
 }
 
+*{
+  font-family: 'PT Serif', serif;
+}
+
 .heading{
     font-family: 'PT Serif', serif;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 800;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,7 +20,7 @@ body{
 .container{
     display: flex;
     flex-direction: row;
-    column-gap: 50px;    
+    column-gap: 30px;    
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -44,7 +48,6 @@ body{
 }
 
 .options button img{
-    border-radius: 50%;
     object-fit: cover;
     width: 50px;
 }
@@ -61,14 +64,33 @@ body{
 .container2 {
     position: relative;
     display: none;
-    width: 400px;
-    height: 300px;
+    width: 250px;
+    height: 200px;
     background-color: #f2f2f2;
     border-radius: 10px;
     margin: 50px auto;
     padding: 20px;
   }
+
+  .container3 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 250px;
+    height: 180px;
+    background-color: #f94a4a;
+    color:aliceblue;
+    border-radius: 10px;
+    margin: 50px auto;
+    padding: 20px;
+  }
   
+  .card img{
+    width:100px;
+  }
   .confetti {
     position: absolute;
     width: 10px;
@@ -127,8 +149,8 @@ body{
 
 
 .confetti-cone{
-  transform-origin: 200px 50px;
-  animation:confetti-cone1 1.2s ease infinite;
+  transform-origin: 235px 54px;
+  animation:confetti-cone1 1.2s ease-in-out infinite;
 }
 @keyframes confetti-cone1{
 0%{
