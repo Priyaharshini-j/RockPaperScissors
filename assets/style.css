@@ -1,0 +1,335 @@
+body{
+    padding: 100px 20px;
+    background-color: rgb(177, 217, 252);
+}
+
+.heading{
+    font-family: 'PT Serif', serif;
+    font-size: 24px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#computer, #player{
+    background: rgb(192, 191, 191);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+    vertical-align: top;
+}
+
+#button-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.options button img{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 50px;
+}
+
+#system-move img, #player-move img{
+    width: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.container2 {
+    position: relative;
+    display: none;
+    width: 400px;
+    height: 300px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  
+  .confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    animation: confetti 3s infinite;
+  }
+  
+  .pop-up {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: pop-up 1s 3s forwards;
+  }
+  
+  @keyframes confetti {
+    0% {
+      transform: translateY(0) rotateZ(0);
+    }
+    100% {
+      transform: translateY(200px) rotateZ(720deg);
+    }
+  }
+  
+  @keyframes pop-up {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    70% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+.conf0{fill:#FC6394;}
+.conf1{fill:#EF3C8A;}
+.conf2{fill:#5ADAEA;}
+.conf3{fill:#974CBE;}
+.conf4{fill:#3CBECD;}
+.conf5{fill:#813BBE;}
+.conf6{fill:#F9B732;}
+.conf7{display:none;fill:none;stroke:#000000;stroke-miterlimit:10;}
+.conf8{fill:none;stroke:#F9B732;stroke-width:9;stroke-linecap:round;stroke-miterlimit:10;}
+
+
+.confetti-cone{
+  transform-origin: 200px 50px;
+  animation:confetti-cone1 1.2s ease infinite;
+}
+@keyframes confetti-cone1{
+0%{
+   transform:translate(40px, 95px)  rotate(45deg) scale(1, 1);
+}
+15%{
+   transform:translate(10px, 145px)  rotate(45deg) scale(1.1, 0.85);
+
+}
+100%{
+  transform:translate(40px, 105px)  rotate(45deg) scale(1, 1);
+}
+  }
+
+#yellow-strip {
+  fill:none;
+  stroke:#F9B732;
+  stroke-width:9;
+  stroke-linecap:round;
+  stroke-miterlimit:10;
+  animation: confdash 1.2s ease infinite;
+}
+
+
+@keyframes confdash {
+0%{
+  stroke-dasharray:1000;
+  stroke-dashoffset:500;
+  transform:translate(-30px, 30px);
+  opacity:0;
+}
+2%{
+  stroke-dasharray:1000;
+  stroke-dashoffset:500;
+  transform:translate(-30px, 30px);
+  opacity:0;
+}
+35%{
+stroke-dasharray:1000;
+stroke-dashoffset:900;
+transform:translate(-2px, 0px);
+opacity:1;
+}
+
+85%{
+  stroke-dasharray:1000;
+  stroke-dashoffset:1000;
+  transform:translate(1px, -5px);
+  opacity:1;
+}
+  90%{
+  stroke-dashoffset:1000;
+   stroke-dashoffset:1000;
+  transform:translate(2px, -8px);
+  opacity:0;
+}
+  100%{
+  stroke-dashoffset:1000;
+   stroke-dashoffset:500;
+  transform:translate(2px, -8px);
+  opacity:0;
+}
+}
+
+
+
+#a2{
+  transform-origin: 310.9px 241px;
+  animation: confa 1.2s ease-out infinite;
+}
+
+#a1
+{transform-origin: 276px 246px;
+  animation: confa 1.2s ease-out infinite;
+}
+
+@keyframes confa {
+0%{
+  opacity:0;
+  transform: translate(-30px, 20px) rotate(0);
+}
+15%{
+  opacity:1;
+  transform: translate(25px, -10px) rotate(60deg);
+}
+80%{
+  opacity:1;
+  transform: translate(33px, -18px) rotate(180deg);
+}
+100%{
+  opacity:0;
+  transform: translate(37px, -23px) scale(0.5)rotate(230deg);
+}
+}
+
+
+#b1{
+  transform-origin: 195.2px 232.6px;
+  animation: confb 1.2s ease-out infinite;
+}
+
+#b2{
+  transform-origin: 230.8px 219.8px;
+  animation: confb 1.2s ease-out infinite;
+}
+#b3 {transform-origin: 222.8px 190.6px;
+  animation: confb 1.2s ease-out infinite;
+}
+
+#b4 {transform-origin: 262px 188.5px;
+  animation: confb 1.2s ease-out infinite;
+}
+
+#b5 {transform-origin: 282.3px 170.6px;
+  animation: confb 1.2s ease-out infinite;
+}
+
+
+@keyframes confb {
+0%{
+  opacity:0;
+  transform: translate(-30px, 20px) rotate(0);
+}
+12%{
+  opacity:1;
+  transform: translate(25px, -10px) rotate(60deg);
+}
+76%{
+  opacity:1;
+  transform: translate(33px, -18px) rotate(180deg);
+}
+100%{
+  opacity:0;
+  transform: translate(37px, -23px) scale(0.5) rotate(240deg);
+}
+}
+
+#c1 {transform-origin: 174.8px 183.4px;
+  animation: confc 1.2s ease-out infinite;
+}
+#c2{
+  transform-origin: 178.9px 156.2px;
+  animation: confc 1.2s ease-out infinite;
+}
+
+#c3{
+  transform-origin: 206.7px 140px;
+  animation: confc 1.2s ease-out infinite;
+}
+
+#c4{
+  transform-origin: 213.5px 120.2px;
+  animation: confc 1.2s ease-out infinite;
+}
+
+@keyframes confc {
+0%{
+  opacity:0.7;
+  transform: translate(-30px, 20px) rotate(0);
+}
+18%{
+  opacity:1;
+  transform: translate(5px, -10px) rotate(60deg);
+}
+76%{
+  opacity:1;
+  transform: translate(13px, -18px) rotate(180deg);
+}
+100%{
+  opacity:0;
+  transform: translate(17px, -23px) scale(0.5) rotate(230deg);
+}
+}
+
+#d1{
+  transform-origin: 127px 176px;
+  animation: confd 1.2s ease-out infinite;
+}
+#d2 {transform-origin: 133px 118px;
+  animation: confd 1.2s ease-out infinite;
+}
+#d3{ transform-origin: 152px 100px;
+  animation: confd 1.2s ease-out infinite;
+}
+
+@keyframes confd {
+0%{
+  opacity:0.7;
+  transform: translate(-20px, 20px) rotate(0);
+}
+18%{
+  opacity:1;
+  transform: translate(-5px, -10px) rotate(60deg);
+}
+76%{
+  opacity:1;
+  transform: translate(-8px, -18px) rotate(180deg);
+}
+100%{
+  opacity:0;
+  transform: translate(-10px, -23px) scale(0.5) rotate(230deg);
+}
+}
+
